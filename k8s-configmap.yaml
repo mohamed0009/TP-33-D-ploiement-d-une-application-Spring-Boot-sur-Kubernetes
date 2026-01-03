@@ -1,0 +1,13 @@
+# Configuration Kubernetes ConfigMap pour Cloud Microservice Platform
+# Stocke les donnees de configuration consommables par les pods
+# Auteur: Medori42
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloud-platform-config
+  namespace: cloud-platform
+  labels:
+    app: cloud-microservice
+    author: medori42
+data:
+  app.message: "Bienvenue depuis Kubernetes ConfigMap - Cloud Platform par Medori42"

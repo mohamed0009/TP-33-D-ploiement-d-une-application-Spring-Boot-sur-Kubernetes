@@ -1,0 +1,23 @@
+# Configuration Kubernetes Service pour Cloud Microservice Platform
+# Expose l'application en utilisant NodePort pour l'acces externe
+# Auteur: Medori42
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-platform-service
+  namespace: cloud-platform
+  labels:
+    app: cloud-microservice
+    version: "2.0.0"
+    author: medori42
+spec:
+  # Le type NodePort permet l'acces externe au service
+  type: NodePort
+  selector:
+    app: cloud-microservice
+  ports:
+    - name: http
+      port: 8081        # Port du service dans le cluster
+      targetPort: 8081  # Port du conteneur
+      nodePort: 30080   # Port externe expose sur le noeud (plage: 30000-32767)
+      protocol: TCP
