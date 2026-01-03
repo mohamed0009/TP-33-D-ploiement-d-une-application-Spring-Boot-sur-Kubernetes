@@ -250,7 +250,7 @@ kubectl logs -f deployment/springboot-k8s-deployment -n k8s-demo
 **Response:**
 ```json
 {
-  "message": "Hello from Kubernetes ConfigMap - Spring Boot Demo by Bilal Khan",
+  "message": "Hello from Kubernetes ConfigMap - Spring Boot Demo by IDRISSI Mohamed",
   "status": "OK"
 }
 ```
@@ -378,8 +378,8 @@ kubectl describe svc springboot-k8s-service -n k8s-demo
 
 ## 👨‍💻 Author
 
-**Bilal Khan**
-Email: bilal.khan@example.com
+**IDRISSI Mohamed**
+Email: idrissi.idrissi@example.com
 
 ## 📄 License
 
